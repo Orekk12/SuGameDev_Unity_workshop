@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         playerInputVel = Vector2.ClampMagnitude(playerInputVel, 1f);
         rb.velocity = playerInputVel * movespeed;//2. Adým
 
-        CheckDirection(playerInputVel.x);
+        //CheckDirection(playerInputVel.x);
     }
     void CheckDirection(float xValue)//3. Adým sonra aim ile deðiþtirilecek
     {
