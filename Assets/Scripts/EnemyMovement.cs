@@ -9,12 +9,21 @@ public class EnemyMovement : MonoBehaviour
     private GameObject player;
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        //player = FindObjectOfType<PlayerMovement>().gameObject;//ilk böyle, sonra deðiþecek
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        if (player != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+
+        }
+    }
+
+    public void SetPlayer(GameObject obj)
+    {
+        player = obj;
     }
 }

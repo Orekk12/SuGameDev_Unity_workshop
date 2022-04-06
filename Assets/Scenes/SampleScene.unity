@@ -488,8 +488,9 @@ MonoBehaviour:
   - {fileID: 154329626}
   - {fileID: 2032072022}
   - {fileID: 240842048}
-  spawnDelay: 3
+  spawnDelay: 1
   enemy: {fileID: 9120916700560574043, guid: 7cf903d78372c504a93e97bf713d1665, type: 3}
+  player: {fileID: 1385794134}
 --- !u!4 &1192231923
 Transform:
   m_ObjectHideFlags: 0
@@ -516,6 +517,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1385794134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9120916700560574043, guid: 760314c90b479bc49b0c5dccb15dd7e4, type: 3}
+  m_PrefabInstance: {fileID: 9120916702143185380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1573804406
 GameObject:
   m_ObjectHideFlags: 0

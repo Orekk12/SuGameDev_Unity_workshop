@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9120916700560573990}
   - component: {fileID: 3824213314039250410}
+  - component: {fileID: 4448398462457427103}
+  - component: {fileID: 6542717657355394261}
   - component: {fileID: 9120916700560573989}
   - component: {fileID: 9120916700560573984}
   - component: {fileID: 9120916700560573988}
@@ -48,6 +50,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cf5291ff3796b439c77165e41a9454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+--- !u!114 &4448398462457427103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120916700560574043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9820d4b3aa2e76a47a3f37978df8c352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 40
+  hp: 0
+  canTakeDmg: 1
+--- !u!114 &6542717657355394261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120916700560574043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b607eabfd58fa47a1f9eb113c2d203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  dieOnContact: 1
 --- !u!212 &9120916700560573989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -149,7 +181,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0028567314, y: -0.034617543}

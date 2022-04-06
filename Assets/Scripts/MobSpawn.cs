@@ -8,6 +8,7 @@ public class MobSpawn : MonoBehaviour
     public List<Transform> spawnPositions;
     public int  spawnDelay;
     public GameObject enemy;
+    public GameObject player;
 
     void Start()
     {
@@ -20,6 +21,9 @@ public class MobSpawn : MonoBehaviour
         {
             var position = Random.Range(0, spawnPositions.Count);
             var newEnemy = Instantiate(enemy, spawnPositions[position].transform.position , Quaternion.identity);
+
+            newEnemy.GetComponent<EnemyMovement>().SetPlayer(player);//olmasý gereken
+
             yield return new WaitForSeconds(spawnDelay);
         };
     }
