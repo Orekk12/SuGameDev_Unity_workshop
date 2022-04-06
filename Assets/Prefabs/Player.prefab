@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1833065827059209333}
   - component: {fileID: 9120916700560573988}
   - component: {fileID: 275995355637643569}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 9120916702165752198}
   - component: {fileID: 9120916702165752192}
   - component: {fileID: 9120916702165752199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponAim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9120916702248889709}
   - component: {fileID: 9120916702248889708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,6 +339,14 @@ PrefabInstance:
     - target: {fileID: 1907620581638397463, guid: 145a7f8b40c5665479cadf53c874188f, type: 3}
       propertyPath: m_Name
       value: SpaceGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907620581638397463, guid: 145a7f8b40c5665479cadf53c874188f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056275414088470580, guid: 145a7f8b40c5665479cadf53c874188f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 145a7f8b40c5665479cadf53c874188f, type: 3}
