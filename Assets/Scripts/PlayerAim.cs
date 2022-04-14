@@ -19,39 +19,25 @@ public class PlayerAim : MonoBehaviour
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - pivotObj.transform.position;
 
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Speed * Time.deltaTime);
-
+        var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePositionOn2D = new Vector3(mousePosition.x, mousePosition.y, 0);
+        transform.right = mousePositionOn2D - transform.position;
+        
+        RotateBasedOnMousePos();
+    }
+    private void RotateBasedOnMousePos()
+    {
         Vector3 aimScale = Vector3.one;
-        //Vector2 aimPosition = Vector2.zero;
-
-        if (Mathf.Abs(angle) > 90)
+        if (transform.right.x < 0)
         {
             aimScale = new Vector3(defaultScale.x, -defaultScale.y, defaultScale.z);
-            //aimPosition.x = -0.5f;
-
+            GFXObject.transform.localScale = new Vector3(-defaultScale.x, defaultScale.y, defaultScale.z);
         }
         else
         {
             aimScale = new Vector3(defaultScale.x, defaultScale.y, defaultScale.z);
+            GFXObject.transform.localScale = new Vector3(defaultScale.x, defaultScale.y, defaultScale.z);
         }
-
         transform.localScale = aimScale;
-        RotateBasedOnMousePos(angle, GFXObject);
-    }
-
-    private void RotateBasedOnMousePos(float angle, GameObject GFXobject)
-    {
-        if (Mathf.Abs(angle) < 90)
-        {
-            GFXobject.transform.localScale = new Vector3(defaultScale.x, defaultScale.y, defaultScale.z);
-        }
-        else if (Mathf.Abs(angle) > 90)
-        {
-            GFXobject.transform.localScale = new Vector3(-defaultScale.x, defaultScale.y, defaultScale.z);
-        }
     }
 }
