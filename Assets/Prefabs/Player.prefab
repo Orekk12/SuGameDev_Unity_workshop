@@ -134,6 +134,10 @@ MonoBehaviour:
   movespeed: 5
   rb: {fileID: 0}
   playerInputVel: {x: 0, y: 0}
+  inputActive: 1
+  dashSpeedMultiplier: 2.5
+  dashTime: 0.3
+  dashCd: 2
 --- !u!114 &1833065827059209333
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,12 +7,12 @@ public class MobSpawn : MonoBehaviour
     // Start is called before the first frame update
     public List<Transform> spawnPositions;
     public int  spawnDelay;
-    public GameObject enemy;
+    public GameObject spawnObject;
     public GameObject player;
 
+    public bool enemySpawner;
     void Start()
     {
-
         StartCoroutine(SpawnEnemiesWithDelay());
     }
 
@@ -21,7 +21,7 @@ public class MobSpawn : MonoBehaviour
         while (true)
         {
             var position = Random.Range(0, spawnPositions.Count);
-            var newEnemy = Instantiate(enemy, spawnPositions[position].transform.position , Quaternion.identity);
+            var newEnemy = Instantiate(spawnObject, spawnPositions[position].transform.position , Quaternion.identity);
 
             newEnemy.GetComponent<EnemyMovement>().SetPlayer(player);//olmasý gereken
 
