@@ -12,6 +12,7 @@ public class MobSpawn : MonoBehaviour
 
     void Start()
     {
+
         StartCoroutine(SpawnEnemiesWithDelay());
     }
 
