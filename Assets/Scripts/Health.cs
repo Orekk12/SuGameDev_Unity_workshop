@@ -60,8 +60,6 @@ public class Health : MonoBehaviour
     {
         OnGameOver?.Invoke();
 
-        Time.timeScale = 0;
-
         Destroy(gameObject);
     }
 }

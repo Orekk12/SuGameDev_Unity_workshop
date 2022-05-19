@@ -146,6 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9820d4b3aa2e76a47a3f37978df8c352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnGameOver:
+    m_PersistentCalls:
+      m_Calls: []
   maxHP: 40
   hp: 0
   healthBar: {fileID: 5144932742933225815}
@@ -226,7 +229,7 @@ Animator:
   m_GameObject: {fileID: 9120916700560574043}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41bbedab1210e8346a6cbdf1afcdb44b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
