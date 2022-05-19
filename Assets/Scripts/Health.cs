@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    public UnityEvent OnGameOver;
+
     public int maxHP = 100;
     public int hp;
     public GameObject healthBar; 
 
     public bool canTakeDmg = true;
+
+    public UITextElement healthUI;
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +58,10 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        OnGameOver?.Invoke();
+
+        Time.timeScale = 0;
+
         Destroy(gameObject);
     }
 }

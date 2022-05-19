@@ -660,8 +660,9 @@ MonoBehaviour:
   - {fileID: 2032072022}
   - {fileID: 240842048}
   spawnDelay: 1
-  enemy: {fileID: 9120916700560574043, guid: 7cf903d78372c504a93e97bf713d1665, type: 3}
+  spawnObject: {fileID: 9120916700560574043, guid: 7cf903d78372c504a93e97bf713d1665, type: 3}
   player: {fileID: 1385794134}
+  enemySpawner: 0
 --- !u!4 &1192231923
 Transform:
   m_ObjectHideFlags: 0
